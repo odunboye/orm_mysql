@@ -1,10 +1,9 @@
 class Table {
   final String name;
-
-  const Table({this.name});
+  const Table({required this.name});
 }
 
-const table = Table();
+const table = Table(name: '');
 
 // Houve falha ao retorna objeto com o nome diferente do atributo
 /* class Column {
@@ -39,7 +38,7 @@ const notNull = NotNull();
 class ForeignTable {
   final String name;
 
-  const ForeignTable({this.name});
+  const ForeignTable({required this.name});
 }
 
-const foreignTable = ForeignTable();
+const foreignTable = ForeignTable(name: '');

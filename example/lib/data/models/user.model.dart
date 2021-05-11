@@ -1,13 +1,14 @@
-import 'package:orm_mysql/orm_mysql.dart';
+import 'package:orm/orm.dart';
 
-@table
+@Table(name: 'Users')
+// @table
 class User {
   @Id()
-  int id;
-  String name;
-  int age;
-  String email;
-  bool isActive;
+  int? id;
+  String? name;
+  int? age;
+  String? email;
+  bool? isActive;
 
   User({this.id, this.name, this.age, this.email, this.isActive});
 
@@ -20,7 +21,7 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final data = <String, dynamic>{};
     data['id'] = id;
     data['name'] = name;
     data['age'] = age;

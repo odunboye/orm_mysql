@@ -1,16 +1,24 @@
-name: orm_mysql
-description: initial sketch of a mysql dart orm
-version: 0.0.5
-homepage: https://github.com/CpdnCristiano/orm_mysql
+name: orm
+description: initial sketch dart orm
+version: 0.0.1
+
+publish_to: none
 
 environment:
-  sdk: '>=2.8.1 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  mysql1: ^0.17.1
-  sql_recase: ^0.2.2
-  recase: 
+  database: #^0.3.3
+    path: ../database/database
+  recase: ^4.0.0-nullsafety.0
+  database_adapter_mysql:
+    path: ../database/adapters/mysql
+
+
 dev_dependencies:
   pedantic: ^1.9.0
   test: ^1.14.4
 
+dependency_overrides:
+  database:
+    path: ../database/database
